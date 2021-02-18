@@ -1,0 +1,14 @@
+{
+  "name": "project6",
+  "version": "0.0.1",
+  "description": "Todo List using GraphQL",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rennery",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.21.0"
+  }
+}
