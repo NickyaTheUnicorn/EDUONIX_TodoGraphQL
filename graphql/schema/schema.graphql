@@ -1,15 +1,25 @@
 type Query {
-    info: String!
+    info: String!,
+    allTodos: [Todo!]!,
+    getATodo(id: Int!): Todo!
 }
 
 type Mutation {
-    createTodo(name: String!, description: String!, state: String!, active: Boolean!): Todo!
+    createTodo(name: String!, description: String!, state: String!, dueDate: Date): Todo!,
+    postponeTodo(id: Int!, numberOfDay: Int!): Todo!,
+    changeDescription(id: Int!, description: String!): String!,
+    takeTodo(id: Int!): Todo!,
+    closeTodo(id: Int!): Todo!,
+    deleteTodo(id: Int!): Todo!
 }
+
+scalar Date
 
 type Todo {
         id: Int!
         name: String!
         description: String!
         state: String!
+        dueDate: Date!
         active: Boolean!
 }
